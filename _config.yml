@@ -10,7 +10,7 @@ comments: true
 # Usernames
 twitter_username: GochoMugo
 github_username: GochoMugo
-disqus_shortname: GochoMugo
+disqus_shortname: dxdeploy
 
 # Build settings
 markdown: kramdown
