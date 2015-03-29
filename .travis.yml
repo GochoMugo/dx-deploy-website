@@ -1,0 +1,12 @@
+language: ruby
+rvm:
+- 2.1
+install: script/deps.sh
+script:
+- script/cibuild.sh
+- script/test.sh
+after_success:
+- script/cipush.sh
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true

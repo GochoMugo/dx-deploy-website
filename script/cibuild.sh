@@ -8,9 +8,10 @@ set -e
 
 
 # we require utilities
-source ./script/utils.sh
+source script/utils.sh
 
 
 # build
-log "building site" 0
+log "building site to _site/" 0
 jekyll build
+
