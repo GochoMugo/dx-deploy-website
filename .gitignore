@@ -1,0 +1,11 @@
+# jekyll site output
+_site/
+
+# sass's compiler cache
+.sass-cache/
+
+# npm-installed modules
+node_modules/
+
+# directory used in deployment
+_out/
