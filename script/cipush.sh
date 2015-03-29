@@ -12,7 +12,7 @@ source ./script/utils.sh
 
 
 # variables
-GH_URL="https://github.com/GochoMugo/dx-deploy-website.git"
+GH_URL="https://github.com/GochoMugo/dx-deploy.git"
 
 
 log "cloning this repo afresh" 0
