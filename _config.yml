@@ -2,15 +2,19 @@
 title: dx-deploy
 email: mugo@forfuture.co.ke
 description: >
-  Deploy packages to Dropbox
-url: "https://dx-deploy.herokuapp.com/"
-baseurl: ""
+  Dropbox as a Package Repository
+url: "https://gochomugo.github.io"
+baseurl: "/dx-deploy"
+comments: true
 
 # Usernames
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: GochoMugo
+github_username: GochoMugo
+disqus_shortname: GochoMugo
 
 # Build settings
 markdown: kramdown
 sass:
   style: compressed
+exclude: ["node_modules/", "script/", "Gruntfile.js", "package.json", ".jshintrc", ".gitignore, ".travis.yml"]
+
