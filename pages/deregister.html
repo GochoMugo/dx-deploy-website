@@ -1,0 +1,48 @@
+---
+layout: default
+permalink: /deregister/
+css:
+  - /css/deregister.css
+scripts:
+  - /assets/angularjs/angular.min.js
+  - /js/deregister.js
+---
+
+
+<div data-ng-app="DeregisterApp">
+
+
+  <div class="banner center" data-ng-controller="FormCtrl">
+    <div class="container">
+
+      <h1>Deregister Repo</h1>
+
+      <div class="alert alert-danger">
+        <strong>Hold right there!</strong> 
+        You about to take away our power to use the Repo. After this you will
+        be on your own!
+      </div>
+
+      <div class="notification-wrapper">
+        <div id="notification"
+          class="notification alert alert-{% raw %}{{ notification.class }}{% endraw %} bounceIn"
+          data-ng-show="notification.visible"
+          data-ng-bind-html="notification.message"></div>
+      </div>
+
+      <div class="col-sm-6 col-sm-offset-3 form">
+        <input type="text" class="form-control input-lg"
+          placeholder="Repo Name" data-ng-model="repoName" />
+        <input type="password" class="form-control input-lg"
+          placeholder="Repo Key" data-ng-model="repoKey" />
+        <button type="button" class="btn btn-primary btn-lg btn-block"
+          data-ng-disabled="!button.enabled"
+          data-ng-click="deregisterRepo">
+          {% raw %}{{ button.text }}{% endraw %}
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+</div>

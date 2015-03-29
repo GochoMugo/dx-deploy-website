@@ -1,0 +1,35 @@
+---
+layout: default
+permalink: /repos/
+css:
+  - /css/repos.css
+scripts:
+  - /assets/angularjs/angular.min.js
+  - /js/repos.js
+---
+
+
+<div data-ng-app="ReposApp">
+
+  <div class="banner banner-sm">
+    <h1>Repos</h1>
+  </div>
+
+  <div class="col-sm-6 col-sm-offset-3"
+    data-ng-controller="ListCtrl">
+    <ul class="list-none repos">
+      <li data-ng-repeat="repos in repos">
+        <div class="col-sm-4">{% raw %}{{ repo.name }}{% endraw %}</div>
+        <div class="col-sm-4">{% raw %}{{ repo.url }}{% endraw %}</div>
+        <div class="col-sm-4">
+          <a class="btn btn-default btn-sm"
+            href="{{ '/deregister/?repoName=' | preprend: site.baseurl }}{% raw %}{{ repo.name }}{% endraw %}"
+            data-ng-click="deregisterRepo">
+            deregister repo
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+</div>

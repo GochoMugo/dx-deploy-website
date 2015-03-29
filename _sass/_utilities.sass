@@ -1,0 +1,41 @@
+.center
+  text-align: center
+
+
+.bg-symphony
+  background: url("/images/symphony.png")
+
+
+// See http://stackoverflow.com/questions/1575141/make-div-100-height-of-browser-window for more information
+.full-height
+  height: 100vh
+
+
+// when we need to push objects down cause of navbar
+.push-down-for-nav
+  padding-top: 110px
+
+
+// underline elements with popovers
+.with-popover
+  border-bottom: 1px dotted grey
+
+
+// list without bullets
+.list-none
+  list-style: none
+
+
+// padded
+.padded
+  padding: 20px
+
+
+// scrolls
+.scroll
+  overflow-x: hidden
+
+
+@include media-query($screen-md)
+  .scroll
+    overflow-x: visible

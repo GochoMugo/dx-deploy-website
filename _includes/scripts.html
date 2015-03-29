@@ -1,0 +1,14 @@
+{% if site.env == "development" %}
+  <script src="{{ '/assets/jquery/jquery.min.js' | prepend: site.baseurl }}"></script>
+  <script src="{{ '/assets/bootstrap/bootstrap.min.js' | prepend: site.baseurl }}"></script>
+{% else %}
+  <script src="{{ site.data.links.jquery_js }}"></script>
+  <script src="{{ site.data.links.bootstrap_js }}"></script>
+{% endif %}
+
+{% if page.scripts %}
+  {% for script in page.scripts %}
+    <script src="{{ script | prepend: site.baseurl }}"></script>
+  {% endfor %}
+{% endif %}
+

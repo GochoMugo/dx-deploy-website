@@ -1,0 +1,47 @@
+---
+layout: default
+permalink: /register/
+css:
+  - /assets/animate/animate.css
+  - /css/register.css
+scripts:
+  - /assets/angularjs/angular.min.js
+  - /js/register.js
+---
+
+<div data-ng-app="RegisterApp">
+
+  <div class="banner">
+    <div class="container">
+
+      <div class="col-sm-6 col-sm-offset-3 center"
+        data-ng-controller="FormCtrl">
+        <h1>Register</h1>
+        <div class="notification-wrapper">
+          <div id="notification"
+            class="notification alert alert-{% raw %}{{ notification.class }}{% endraw %} bounceIn"
+            data-ng-show="notification.visible"
+            data-ng-bind-html="notification.message"></div>
+        </div>
+        <div class="form">
+          <input type="text" class="form-control input-lg"
+            placeholder="Repo Name"
+            data-ng-model="repoName" />
+          <input type="text" class="form-control input-lg"
+            placeholder="https://project-url.com/" data-ng-model="repoUrl" />
+          <input type="password" class="form-control input-lg"
+            placeholder="Secret Key" data-ng-model="repoKey" />
+          <button type="button" class="btn btn-primary btn-lg btn-block"
+            data-ng-click="registerApplication"
+            data-ng-disabled="!button.enabled">
+            {% raw %}{{ button.text }}{% endraw %}
+          </button>
+          <div class="clearfix"></div>
+        </div><!-- /.form -->
+      </div>
+
+    </div>
+  </div>
+
+
+</div>

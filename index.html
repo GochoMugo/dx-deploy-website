@@ -1,0 +1,31 @@
+---
+layout: default
+css:
+  - /css/index.css
+scripts:
+  - /assets/angularjs/angular.min.js
+  - /js/index.js
+---
+
+<div data-ng-app="IndexApp">
+
+  <section class="banner" data-ng-controller="BannerCtrl">
+    <div class="container">
+
+      <div class="col-sm-3 dropbox-icon">
+        <img src="{{ '/images/dropbox.png' | prepend: site.baseurl }}" />
+      </div>
+      <div class="col-sm-8">
+        <h1>dx-deploy</h1>
+        <p>Push packages to Dropbox &mdash; For a Shared Package Repository.</p>
+        <ul class="list-none labels">
+          <li>
+            <label>{% raw %}{{ numRepos }}{% endraw %} repos</label>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+</div>

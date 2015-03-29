@@ -1,0 +1,55 @@
+// Fonts
+// Raleway Font
+@font-face
+  font-family: Raleway
+  src: url("../assets/fonts/raleway/raleway_regular-webfont.eot")
+  font-weight: 900
+  font-style: normal
+
+// Shadows Into Light
+@font-face
+  font-family: ShadowsIntoLight
+  src: url("../assets/fonts/shadows-into-light/ShadowsIntoLight.ttf")
+  font-weight: 400
+  font-style: normal
+
+
+$base-font-family: ShadowsIntoLight, Helvetica, Arial, sans-serif
+$base-font-size: 18px
+$base-font-size-small: $base-font-size * 0.875
+$base-line-height: 1.5
+
+
+// Colors
+$color-text: #111
+$color-background: #fdfdfd
+$color-brand: #4D407A
+$color-brand-text: #BFBFC8
+$color-grey: #828282
+$color-grey-light: lighten($color-grey, 40%)
+$color-grey-dark: darken($color-grey, 25%)
+
+
+// Spacings and Widths
+$spacing-unit: 30px
+$content-width: 800px
+$on-palm: 600px
+$on-laptop: 800px
+$screen-xs: 480px
+$screen-sm: 768px
+$screen-md: 992px
+$screen-lg: 1200px
+$padding-top: 100px
+
+
+// Using media queries with like this:
+// @include media-query($on-palm)
+//     .wrapper
+//         padding-right: $spacing-unit / 2
+//         padding-left: $spacing-unit / 2
+//     
+// 
+@mixin media-query($device)
+  @media screen and (max-width: $device)
+    @content
+
