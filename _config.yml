@@ -6,6 +6,7 @@ description: >
 url: "https://gochomugo.github.io"
 baseurl: "/dx-deploy"
 comments: true
+api_url: "http://dxdeploy-forfuture.rhcloud.com"
 
 # Usernames
 twitter_username: GochoMugo
