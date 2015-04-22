@@ -1,5 +1,5 @@
 #
-# Push to Master
+# Push to Gh-pages
 #
 
 
@@ -8,7 +8,11 @@ set -e
 
 
 # we require utilities
-source ./script/utils.sh
+source script/utils.sh
+
+
+# script variables
+LOG_TITLE="ci-push"
 
 
 # variables
@@ -45,6 +49,6 @@ echo -e "machine github.com\n  login mugo@forfuture.co.ke\n  password ${GH_TOKEN
 
 log "pushing to master" 0
 git push origin master \
-  && log "successfully pushed to master" 1 \
-  || log "failed to push to master" 2
+  && log "successfully pushed to gh-pages" 1 \
+  || log "failed to push to gh-pages" 2
 

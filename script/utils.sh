@@ -16,13 +16,15 @@ COLOR_WHITE="\033[1;37m"
 # ${1}  message to write to console
 # ${2} what color to use. 0 - info(blue), 1- success(green),
 #   2 - error(red)
+# ${LOG_TITLE} for setting title of logging
 log() {
   if [ ! ${2} -eq -1 ] ; then
     [ ${2} -eq 0 ] && local color=${COLOR_BLUE}
     [ ${2} -eq 1 ] && local color=${COLOR_GREEN}
     [ ${2} -eq 2 ] && local color=${COLOR_RED}
-    echo -e "${COLOR_WHITE}${color}${1}${COLOR_RESET}"
+    echo -e "${COLOR_WHITE}${LOG_TITLE}: ${color}${1}${COLOR_RESET}"
   else
     echo "${1}"
   fi
 }
+

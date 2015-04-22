@@ -7,6 +7,10 @@
 source script/utils.sh
 
 
+# script variables
+LOG_TITLE="serve"
+
+
 log "cleaning _site" 0
 rm -rf _site/
 

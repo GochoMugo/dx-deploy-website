@@ -17,5 +17,5 @@ disqus_shortname: dxdeploy
 markdown: kramdown
 sass:
   style: compressed
-exclude: ["node_modules/", "script/", "Gruntfile.js", "package.json", ".jshintrc", ".gitignore, ".travis.yml"]
+exclude: ["node_modules/", "script/", "Gruntfile.js", "package.json", ".jshintrc", ".gitignore", ".travis.yml"]
 

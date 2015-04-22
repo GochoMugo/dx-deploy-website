@@ -11,6 +11,10 @@ set -e
 source script/utils.sh
 
 
+# script variables
+LOG_TITLE="deps"
+
+
 log "Node $(node --version)" 1
 log "Npm $(npm --version)" 1
 
